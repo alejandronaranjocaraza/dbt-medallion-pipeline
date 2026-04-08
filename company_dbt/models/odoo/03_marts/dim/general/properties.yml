@@ -1,0 +1,25 @@
+models:
+  - name: odoo_dim__company
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+  - name: odoo_dim__date
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+  - name: odoo_dim__doctor
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+  - name: odoo_dim__patient
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null

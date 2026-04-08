@@ -1,0 +1,14 @@
+models:
+  - name: odoo_dim__business_unit
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_dim__product
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null

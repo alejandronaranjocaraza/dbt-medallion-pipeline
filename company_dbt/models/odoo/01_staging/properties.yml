@@ -1,0 +1,58 @@
+models:
+  - name: odoo_stg__appointment_slot
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_stg__pos_order # No dedup or scd2 necessary (append only)
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_stg__pos_order_line # No dedup or scd2 necessary (append only)
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_stg__product_category
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_stg__product_product
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_stg__product_template
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_stg__res_partner
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_stg__res_partner_res_partner_category_rel
+    columns:
+      - name: partner_id
+        data_tests:
+          - not_null
+      - name: category_id
+        data_tests:
+          - not_null

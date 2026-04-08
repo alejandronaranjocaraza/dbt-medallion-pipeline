@@ -1,0 +1,50 @@
+snapshots:
+  - name: odoo_scd2__product_product
+    relation: ref('odoo_stg__product_product')
+    description: "product_product SCD2 via write_date"
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: timestamp
+      updated_at: write_date
+      dbt_valid_to_current: "cast('9999-12-31' as date)"
+
+  - name: odoo_scd2__product_category
+    relation: ref('odoo_stg__product_category')
+    description: "product_category SCD2 via write_date"
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: timestamp
+      updated_at: write_date
+      dbt_valid_to_current: "cast('9999-12-31' as date)"
+
+  - name: odoo_scd2__product_template
+    relation: ref('odoo_stg__product_template')
+    description: "product_template SCD2 via write_date"
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: timestamp
+      updated_at: write_date
+      dbt_valid_to_current: "cast('9999-12-31' as date)"
+
+  - name: odoo_scd2__res_partner
+    relation: ref('odoo_stg__res_partner')
+    description: "res_partner SCD2 via write_date"
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: timestamp
+      updated_at: write_date
+      dbt_valid_to_current: "cast('9999-12-31' as date)"
+
+  - name: odoo_scd2__appointment_slot
+    relation: ref('odoo_stg__appointment_slot')
+    description: "appointment_slot SCD2 via write_date"
+    config:
+      schema: snapshots
+      unique_key: id
+      strategy: timestamp
+      updated_at: write_date
+      dbt_valid_to_current: "cast('9999-12-31' as date)"

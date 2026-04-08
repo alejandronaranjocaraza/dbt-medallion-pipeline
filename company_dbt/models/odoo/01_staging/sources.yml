@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: odoo
+    config: # was meta before dbt v1.10
+      external_location: "read_parquet('s3://company-staging/{name}/*/{name}.parquet',union_by_name=true)"
+    tables:
+      - name: pos_order_line
+      - name: pos_order
+      - name: res_partner
+      - name: appointment_slot
+      - name: product_product
+      - name: product_template
+      - name: product_category
+
+  - name: odoo_rel
+    config:
+      external_location: "s3://company-raw-rel/{name}/{name}_chunk_*.parquet"
+    tables:
+      - name: res_partner_res_partner_category_rel

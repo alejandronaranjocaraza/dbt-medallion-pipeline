@@ -1,0 +1,55 @@
+models:
+  - name: odoo_int__appointment_slot
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_int__pos_order
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_int__pos_order_line
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_int__product
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_int__product_category
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_int__res_partner
+    columns:
+      - name: id
+        data_tests:
+          - not_null
+
+  - name: odoo_int__res_partner_doctor
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: odoo_int__res_partner_patient
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null

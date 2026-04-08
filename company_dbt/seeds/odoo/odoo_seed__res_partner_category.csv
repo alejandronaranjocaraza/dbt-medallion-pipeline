@@ -1,0 +1,26 @@
+id,name,active
+1,software development,true
+2,wholesaler,true
+3,consulting,true
+6,medical equipment,true
+4,erp,true
+7,furniture,true
+8,ecommerce,true
+13,digital twin,true
+10,physiotherapist,true
+11,nutritionist,true
+12,affiliate,true
+17,assistance provider,true
+19,prevem,true
+25,hospital purchasing supplier,true
+28,b2b prospects,true
+5,patient,true
+29,b2b client,true
+9,doctor,false
+15,patient,false
+27,doctor,true
+30,labels,true
+31,patients,true
+32,tlalpan,true
+33,person,true
+34,patient,true

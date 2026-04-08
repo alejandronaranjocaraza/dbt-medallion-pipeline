@@ -1,0 +1,48 @@
+name: 'company_dbt'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'company_dbt'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+models:
+  company_dbt:
+    odoo:
+      01_staging:
+        +materialized: view
+        +schema: odoo_staging
+        +post_hook: "COPY {{ this }} TO 's3://company-curated/new/01_staging/{{ this.name }}.parquet' (FORMAT PARQUET)"
+      02_intermediate:
+        +materialized: view
+        +schema: odoo_intermediate
+        +post_hook: "COPY {{ this }} TO 's3://company-curated/new/02_intermediate/{{ this.name }}.parquet' (FORMAT PARQUET)"
+      03_marts:
+        agg:
+          +materialized: table
+          +schema: odoo_marts_agg
+          +post_hook: "COPY {{ this }} TO 's3://company-curated/new/03_marts/agg/{{ this.name }}.parquet' (FORMAT PARQUET)"
+        dim:
+          +materialized: table
+          +schema: odoo_marts_dim
+          +post_hook: "COPY {{ this }} TO 's3://company-curated/new/03_marts/dim/{{ this.name }}.parquet' (FORMAT PARQUET)"
+        fact:
+          +materialized: table
+          +schema: odoo_marts_fact
+          +post_hook: "COPY {{ this }} TO 's3://company-curated/new/03_marts/fact/{{ this.name }}.parquet' (FORMAT PARQUET)"

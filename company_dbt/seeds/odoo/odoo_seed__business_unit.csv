@@ -1,0 +1,18 @@
+id,product_type,name
+cme,service,Consulta médica
+cnm,service,Consulta psico/nutri
+fis,service,Servicio de fisioterapia
+che,service,Paquete de valoración
+lab,service,Laboratorio
+pme,service,Procedimiento menor
+dia,service,Diagnóstico clínico
+img,service,Imagenología
+med,service,Medicamento
+vac,service,Vacuna
+act,asset,Activo médico
+ins,supply,Insumo médico
+mmb,subscription,Pago de membresía
+ser,external,Servicio externo
+otr,service,Otros
+hon,external,Honorarios médicos
+999,none,No categorizado
