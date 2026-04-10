@@ -23,3 +23,9 @@ models:
         data_tests:
           - unique
           - not_null
+  - name: odoo_dim__consulting_room
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null

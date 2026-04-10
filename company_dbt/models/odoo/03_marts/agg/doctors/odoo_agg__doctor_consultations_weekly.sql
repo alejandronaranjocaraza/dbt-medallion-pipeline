@@ -1,0 +1,41 @@
+with doctor_consultations as (
+select * from {{ ref('odoo_agg__doctor_consultations') }}
+),
+dim_date as (
+select * from {{ ref('odoo_dim__date') }}
+where date_day <= today()
+),
+dim_doctor as (
+select id from {{ ref('odoo_dim__doctor') }}
+),
+doctor_weekly_consultations as (
+select
+  dc.doctor_key,
+  dd.date_week,
+  count(distinct dc.order_id) as qty_orders
+from doctor_consultations dc
+left join dim_date dd on dc.create_date_key = dd.id
+group by dc.doctor_key, dd.date_week
+),
+base as (
+select
+  dda.date_week,
+  ddo.id as doctor_key
+from
+(select distinct date_week from dim_date) dda
+cross join dim_doctor ddo
+),
+final as (
+select
+  b.date_week,
+  b.doctor_key,
+  coalesce(dwc.qty_orders,0) as qty_orders
+from base b
+left join doctor_weekly_consultations dwc
+on b.date_week = dwc.date_week and b.doctor_key = dwc.doctor_key
+)
+select
+  date_week,
+  doctor_key,
+  qty_orders
+from final

@@ -1,0 +1,49 @@
+id,name,type
+1,consultorio 1,consulting room
+2,consultorio 2,consulting room
+4,consultorio 4,consulting room
+5,consultorio 5,consulting room
+7,consultorio 7,consulting room
+9,consultorio 9,consulting room
+10,consultorio 10,consulting room
+14,sala exploracion 1,examination room
+15,sala exploracion 2,examination room
+16,gimnasio 1,physiotherapy
+17,gimnasio 2,physiotherapy
+18,gimnasio 3,physiotherapy
+19,gimnasio 4,physiotherapy
+20,gimnasio 5,physiotherapy
+21,gimnasio 6,physiotherapy
+22,gimnasio 7,physiotherapy
+24,gimnasio de rehabilitación,physiotherapy
+25,sala 1 fisioterapia,physiotherapy
+26,sala 2 usg,imaging
+13,toma de muestras,procedure room
+12,atencion continua,procedure room
+28,sala de medicos,other
+29,planta baja,other
+30,vacunas,procedure room
+8,consultorio 8,consulting room
+6,consultorio 6,consulting room
+11,consultorio 11,consulting room
+3,consultorio 3,consulting room
+31,cuarto 1,consulting room
+32,cuarto 1,consulting room
+33,cuarto 2,consulting room
+34,cuarto 2,consulting room
+35,cuarto 3,consulting room
+36,cuarto 3,consulting room
+37,cuarto 4,consulting room
+38,cuarto 4,consulting room
+39,cuarto 5,consulting room
+40,cuarto 5,consulting room
+41,cuarto 6,consulting room
+42,cuarto 6,consulting room
+43,cuarto 7,consulting room
+44,cuarto 7,consulting room
+45,cuarto 8,consulting room
+46,cuarto 8,consulting room
+47,cuarto 9,consulting room
+48,cuarto 9,consulting room
+49,cuarto 10,consulting room
+50,cuarto 10,consulting room

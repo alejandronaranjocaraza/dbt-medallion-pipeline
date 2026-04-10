@@ -28,6 +28,7 @@ select
   fs.order_line_id,
   fs.doctor_key,
   fs.product_key,
+  fs.bu_key,
   fs.create_date_key,
   fs.company_key,
   fs.category_key,
