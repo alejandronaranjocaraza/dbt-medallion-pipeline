@@ -69,4 +69,5 @@ architecture, star schema, and slowly changing dimensions.
 
 - [dbt Documentation](https://docs.getdbt.com/docs/introduction)
 - [DuckDB Documentation](https://duckdb.org/docs/)
+- [Fundamentals of Data Engineering — Joe, R., & Matt, H.](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/)
 - [The Data Warehouse Toolkit — Kimball](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/)
