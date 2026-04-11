@@ -71,5 +71,5 @@ architecture, star schema, and slowly changing dimensions.
 - [DuckDB Documentation](https://duckdb.org/docs/)
 - Joe, R., & Matt, H. (2022). *Fundamentals of Data Engineering.*<br>
   <https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/>
-- Ralph K., & Margy, R. (2013). *The Data Warehouse Toolkit*<br>
+- Ralph K., & Margy, R. (2013). *The Data Warehouse Toolkit*.<br>
   <https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/>
